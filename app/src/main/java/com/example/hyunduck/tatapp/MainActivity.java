@@ -4,6 +4,11 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -12,6 +17,26 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        String[] SampleUsers = {"Tatap","Ssibjay","Kooklaus","Eswoo","Nicetry","Hodolee","Good",
+                "Neverendingstory","Lifegear", "Milkhockey"};
+
+        ListAdapter ContactListAdapter = new ArrayAdapter<>(this, R.layout.contact,
+                SampleUsers);
+
+        ListView ContactListView = (ListView) findViewById(R.id.ContactList);
+
+        ContactListView.setAdapter(ContactListAdapter);
+
+        ContactListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+
+
+
+            }
+        });
+
     }
 
 
