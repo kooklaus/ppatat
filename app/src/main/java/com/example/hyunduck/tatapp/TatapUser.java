@@ -7,7 +7,7 @@ import com.parse.ParseUser;
  */
 
 @ParseClassName("tatappUser")
-public class TatappUser extends ParseUser{
+public class TatapUser extends ParseUser{
     public void setPhoneNumber(String phoneNumber)
     {
         put("phoneNumber", phoneNumber);
